@@ -63,7 +63,7 @@ void game::update()
 
 			}
 	}
-	if (input == "paper")
+	else if (input == "paper")
 	{
 		switch (computermove)
 			{
@@ -80,7 +80,7 @@ void game::update()
 
 			}
 	}
-	if (input == "scissors")
+	else if (input == "scissors")
 	{
 		switch (computermove)
 			{
