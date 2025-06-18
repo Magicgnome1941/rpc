@@ -1,2 +1,2 @@
 # rps
-basic terminal roxk paper scissors game
+basic terminal rock paper scissors game
