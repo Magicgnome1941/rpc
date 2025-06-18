@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/anthonyr/Code/rpc/RockPaperScissors/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
