@@ -1,2 +1,2 @@
-# rpc
-basic terminal game
+# rps
+basic terminal roxk paper scissors game
