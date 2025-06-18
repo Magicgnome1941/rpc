@@ -22,6 +22,25 @@ if (inittrue)
 
 }
 
+int movenum (std::string& move)
+{
+
+if (move == "rock") {return 1;}
+if (move == "paper") {return 2;}
+if (move == "scissors") {return 3;}
+return 0;
+
+}
+
+int result [3][3] =
+{
+	//cpu
+	{3,2,1},
+	{1,3,2},
+	{2,1,3},
+
+};
+
 void game::processinputs()
 {
 	std::cout << "What is your move: ";
@@ -31,6 +50,7 @@ void game::processinputs()
 void game::update()
 {
 	computermove = randnum(1, 3);
+	playermove = movenum(input);
 	// 1: rock 2: paper 3: scissors
 	
 	switch (computermove) // winstate 1:win 2:lose 3:tie
@@ -45,59 +65,8 @@ void game::update()
 			std::cout << "CPU chose scissors\n";
 			break;
 		}
-	if (input == "rock")
 
-	{
-
-		switch (computermove) // winstate 1:win 2:lose 3:tie
-			{
-			case 1:
-				winstate = 3;
-				break;
-			case 2:
-				winstate = 2;
-				break;
-			case 3:
-				winstate = 1;
-				break;
-
-			}
-	}
-	else if (input == "paper")
-	{
-		switch (computermove)
-			{
-
-			case 1:
-				winstate = 1;
-				break;
-			case 2:
-				winstate = 3;
-				break;
-			case 3:
-				winstate = 2;
-				break;
-
-			}
-	}
-	else if (input == "scissors")
-	{
-		switch (computermove)
-			{
-
-			case 1:
-				winstate = 2;
-				break;
-			case 2:
-				winstate = 1;
-				break;
-			case 3:
-				winstate = 3;
-				break;
-
-			}
-	}
-	else {winstate = 0;}
+	winstate = result[playermove - 1][computermove - 1];
 }
 
 void game::draw()

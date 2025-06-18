@@ -16,6 +16,7 @@ class game
 	void rungame();
 	std::string input;
 	int computermove;
+	int playermove;
 	short int winstate;
 	bool inittrue = true;
 };
